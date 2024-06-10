@@ -12,7 +12,6 @@ int secondButtonState = 0;
 void setup() {
   // initialize the LED pin as an output:
   pinMode(ledPin, OUTPUT);
-
   // initialize both buttons as an input:
   pinMode(firstButtonPin, INPUT);
   pinMode(secondButtonPin, INPUT);
