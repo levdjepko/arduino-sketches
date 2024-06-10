@@ -22,6 +22,7 @@ void loop() {
   // read the state of the pushbutton value:
   firstButtonState = digitalRead(firstButtonPin);
   secondButtonState = digitalRead(secondButtonPin);
+  
   // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
   if (firstButtonState == LOW && secondButtonState == LOW) {
     // LED should be fully "ON" if both buttons are depressed
