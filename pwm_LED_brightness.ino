@@ -17,22 +17,22 @@ void setup() {
 }
 
 void loop() {
-  // read the state of the pushbutton value:
+  // Read the state of the pushbutton value:
   firstButtonState = digitalRead(firstButtonPin);
   secondButtonState = digitalRead(secondButtonPin);
   
-  // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
+  //Check if the pushbutton is pressed. If it is, the buttonState is HIGH:
   if (firstButtonState == LOW && secondButtonState == LOW) {
     // LED should be fully "ON" if both buttons are depressed
     analogWrite(ledPin, 255);
   } else if (firstButtonState == HIGH && secondButtonState == LOW) {
-    // if first button is pressed, LED should be PWM'd to ~75%
+    // If first button is pressed, LED should be PWM'd to ~75%
     analogWrite(ledPin, 255 * 0.75);
   } else if (firstButtonState == LOW && secondButtonState == HIGH) {
-    // if the second button is pressed, the PWM-regulated brightness is set to 50%
+    // If the second button is pressed, the PWM-regulated brightness is set to 50%
     analogWrite(ledPin, 255 * 0.5);
   } else {
-    // if both are pressed, brightness is set to 25%
+    // If both are pressed, brightness is set to 25%
     analogWrite(ledPin, 255 * 0.25);
   }
 }
