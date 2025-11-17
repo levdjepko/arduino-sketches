@@ -26,7 +26,7 @@ void loop() {
     // LED should be fully "ON" if both buttons are depressed
     analogWrite(ledPin, 255);
   } else if (firstButtonState == HIGH && secondButtonState == LOW) {
-    // If first button is pressed, LED should be PWM'd to ~75%
+    // If the first button is pressed, the LED should be PWM'd to ~75%
     analogWrite(ledPin, 255 * 0.75);
   } else if (firstButtonState == LOW && secondButtonState == HIGH) {
     // If the second button is pressed, the PWM-regulated brightness is set to 50%
